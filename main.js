@@ -106,16 +106,11 @@ function mainMenu() {
       
         outputEl.innerHTML = 'Decrease all grades by 10%';
     } else if (selection == 'remove50') {
-        // Remove all grades that are below 50.
-        grades.forEach((grade, index) => {
-            if (grade < 50) {
-                grades.splice(index, 1);
-            }
-        });
-        for (let i = 0; i < 50; i++) {
-            while(grades.includes(i)) {
-                index = grades.indexOf(i);
-                grades.splice(index, 1);
+        // Remove all grades that are below 50
+        for (let i = 0; i < 50; i++) { // iterates through number 0 - 49
+            while(grades.includes(i)) { // loops until no more of that number is in the array
+                index = grades.indexOf(i); // grabs the first index of that number
+                grades.splice(index, 1); // splices out that index
             }
         }
         outputEl.innerHTML = 'Remove grades below 50';
