@@ -68,7 +68,7 @@ function mainMenu() {
         outputEl.innerHTML = 'Random grade to 100';
     } else if (selection == 'addRandom') {
         // Add a random grade between 0 and 100 to the end of the array.
-        grades[grades.length] = Math.floor(Math.random() * 101);
+        grades.push(Math.floor(Math.random() * 101));
       
         outputEl.innerHTML = 'Add random grade';
     } else if (selection == 'removeLast') {
